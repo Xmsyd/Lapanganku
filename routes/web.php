@@ -5,7 +5,6 @@ use App\Http\Controllers\BackendController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\LapanganController;
 use App\Http\Controllers\BookingsController;
-use App\Http\Controllers\PemesanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,9 +34,6 @@ Route::get('/lapangan',
 
 Route::get('bookings',
     [BookingsController::class, 'bookings']);
-
-Route::get('/pemesan',
-    [PemesanController::class, 'pemesan']);
 
 });
 

@@ -6,30 +6,27 @@
 <table class="table table-borderless">
 <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">No</th>
+      <th scope="col">ID Lapangan</th>
+      <th scope="col">Nama Lapangan</th>
+      <th scope="col">Lokasi </th>
+      <th scope="col">Harga Perjam</th>
+      <th scope="col">Kategori Id</th>
     </tr>
   </thead>
   <tbody>
+  @php $nomor = 1 ; @endphp
+  @foreach ( $lapangan as $lap )
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row"> {{ $nomor }} </th>
+      <td> {{ $lap->id }} </td>
+      <td> {{ $lap->nama_lap }} </td>
+      <td> {{ $lap->lokasi }} </td>
+      <td> {{ $lap->harga_perjam }} </td>
+      <td> {{ $lap->kategori_id }} </td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+  @php $nomor++ @endphp
+  @endforeach
   </tbody>
 </table>
 @endsection

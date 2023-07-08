@@ -81,27 +81,21 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="../../index.html" class="nav-link">
+                  <a href="/backend/kategori" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Kategori</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="../../index2.html" class="nav-link">
+                  <a href="/backend/lapangan" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Lapangan</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="../../index3.html" class="nav-link">
+                  <a href="/backend/bookings" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Bookings</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Pemesan</p>
                   </a>
                 </li>
               </ul>

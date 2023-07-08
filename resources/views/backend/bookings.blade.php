@@ -6,30 +6,31 @@
 <table class="table table-borderless">
 <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">No</th>
+      <th scope="col">ID Bookings</th>
+      <th scope="col">ID Pemesan</th>
+      <th scope="col">ID Lapangan</th>
+      <th scope="col">Tanggal</th>
+      <th scope="col">Jam Mulai</th>
+      <th scope="col">Jam Berakhir</th>
+      <th scope="col">Durasi</th>
     </tr>
   </thead>
   <tbody>
+    @php $nomor = 1; @endphp
+    @foreach( $bookings as $booking)
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row">{{ $nomor }}</th>
+      <td> {{ $booking->id }} </td>
+      <td> {{ $booking->pemesan_id }} </td>
+      <td>{{ $booking->lapangan_id }}</td>
+      <td>{{ $booking->tanggal }}</td>
+      <td>{{ $booking->jam_mulai }}</td>
+      <td>{{ $booking->jam_akhir }}</td>  
+      <td>{{ $booking->durasi }}</td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+    @php $nomor++ @endphp
+    @endforeach
   </tbody>
 </table>
 @endsection
