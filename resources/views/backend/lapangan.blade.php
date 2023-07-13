@@ -2,7 +2,7 @@
 
 @section('content')
 <h1>Lapangan</h1>
-<a href="#" class="btn btn-outline-primary">ayo klik aku</a>
+<a href="lapangan/tambah" class="btn btn-outline-primary">ayo klik aku</a>
 <table class="table table-borderless">
 <thead>
     <tr>
@@ -12,6 +12,7 @@
       <th scope="col">Lokasi </th>
       <th scope="col">Harga Perjam</th>
       <th scope="col">Kategori Id</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -24,6 +25,17 @@
       <td> {{ $lap->lokasi }} </td>
       <td> {{ $lap->harga_perjam }} </td>
       <td> {{ $lap->kategori_id }} </td>
+      <td>
+          <div class="btn-group" role="group" aria-label="Action Buttons">
+              <a href="#" class="btn btn-primary mr-1" style="border-radius: 3px;">View</a>
+              <a href="{{ route('lapangan.edit', $lap ) }}" class="btn btn-warning mr-1" style="border-radius: 3px;">Edit</a>
+              <form action="{{ route('lapangan.destroy', $lap) }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
+                  @csrf 
+                  @method('DELETE')
+                  <button type="submit" class="btn btn-danger">Delete</button>
+              </form>
+          </div>
+      </td>
     </tr>
   @php $nomor++ @endphp
   @endforeach

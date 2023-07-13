@@ -12,7 +12,7 @@ class Booking extends Model
     public $timestamps = false;
     protected $fillable = [
         'id', 
-        'pemesan_id', 
+        'user_id', 
         'lapangan_id', 
         'tanggal', 
         'jam_mulai', 
