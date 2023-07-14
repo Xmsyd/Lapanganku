@@ -12,7 +12,8 @@ class LapanganController extends Controller
     public function lapangan() {
         // Simpan data kedalam variabel
         $lapangan = Lapangan::all();
-        return view('backend/lapangan', compact('lapangan'));
+        $kategori = Kategori::all();
+        return view('backend/lapangan', compact('lapangan', 'kategori'));
     }
 
     // fungsi VIEW page tambah

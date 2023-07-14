@@ -11,6 +11,7 @@
       <th scope="col">Nama User</th>
       <th scope="col">Email</th>
       <th scope="col">Password</th>
+      <th scope="col">Role</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -23,6 +24,7 @@
       <td> {{ $user->name }} </td>
       <td> {{ $user->email }} </td>
       <td> {{ $user->password }} </td>
+      <td> {{ $user->role }} </td>
       <td>
           <div class="btn-group" role="group" aria-label="Action Buttons">
               <a href="#" class="btn btn-primary mr-1" style="border-radius: 3px;">View</a>

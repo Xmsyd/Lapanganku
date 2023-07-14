@@ -5,6 +5,7 @@ use App\Http\Controllers\BackendController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\LapanganController;
 use App\Http\Controllers\BookingsController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UsersController;
 
 
@@ -19,13 +20,24 @@ use App\Http\Controllers\UsersController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('about', function () {
-    return view('about');
-});
+Route::get('/',
+    [HomeController::class, 'home']);
+
+Route::get('about', 
+    [HomeController::class, 'about']);
+
+Route::get('detail/{id}',
+    [HomeController::class, 'detail'])->name('detail');
+
+Route::post('backend/bookings', 
+    [HomeController::class, 'booking'])->name('booking');
+
+
+
 
 Route::prefix('backend')->group(function () {
 

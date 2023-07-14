@@ -11,7 +11,7 @@
       <th scope="col">Nama Lapangan</th>
       <th scope="col">Lokasi </th>
       <th scope="col">Harga Perjam</th>
-      <th scope="col">Kategori Id</th>
+      <th scope="col">Kategori lapangan</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -24,7 +24,9 @@
       <td> {{ $lap->nama_lap }} </td>
       <td> {{ $lap->lokasi }} </td>
       <td> {{ $lap->harga_perjam }} </td>
-      <td> {{ $lap->kategori_id }} </td>
+      <td>
+          {{ $kategori->where('id', $lap->kategori_id)->first()->nama }}
+      </td>
       <td>
           <div class="btn-group" role="group" aria-label="Action Buttons">
               <a href="#" class="btn btn-primary mr-1" style="border-radius: 3px;">View</a>
@@ -37,7 +39,7 @@
           </div>
       </td>
     </tr>
-  @php $nomor++ @endphp
+  @php $nomor++; @endphp
   @endforeach
   </tbody>
 </table>

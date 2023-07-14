@@ -11,7 +11,8 @@ class BookingsController extends Controller
     Public Function bookings (){
         // simpan data kedalam variabel
         $bookings = Booking::all();
-        return view('backend/bookings', compact('bookings'));
+        $user =     User::all();
+        return view('backend/bookings', compact('bookings', 'user'));
     }
 
 
